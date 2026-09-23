@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex.dev | Teenlancer & Digital Creator Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                        accent: '#3b82f6',
+                        accentHover: '#2563eb',
+                        indigoAccent: '#6366f1'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #3b82f6, #6366f1, #ec4899);
+            border-radius: 9999px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-[#0f172a]/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand Title -->
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Alex.dev</span>
+                    <span class="px-2.5 py-0.5 text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full">Teenlancer</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Services</a>
+                    <a href="#flagship" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Portfolio Corner</a>
+                    <a href="#work" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Work</a>
+                    <a href="#whyme" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Why Me</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-500/20 transition-all">Let's Talk</a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">About</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Services</a>
+            <a href="#flagship" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Portfolio Corner</a>
+            <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Work</a>
+            <a href="#whyme" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800">Why Me</a>
+            <a href="#contact" class="block text-center mt-2 px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-md">Let's Talk</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-36">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700/60 mb-6">
+                            <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-xs font-medium text-slate-300">Available for new client projects & collaborations</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+                            Building Digital Experiences <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">That Convert</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 font-normal">
+                            Hi! I'm Alex, a passionate 17-year-old teenlancer crafting high-converting websites, compelling copy, and modern digital designs for ambitious brands.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#flagship" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-500/25 transition-all text-center">
+                                View Work <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all text-center">
+                                Hire Me
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Avatar & Visual Element -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+                            <div class="glow-border w-full h-full rounded-full p-2 bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="Alex Avatar" class="w-full h-full object-cover rounded-full shadow-2xl">
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-slate-800/95 backdrop-blur border border-slate-700 p-4 rounded-2xl shadow-xl flex items-center space-x-3">
+                                <div class="p-3 bg-blue-500/20 text-blue-400 rounded-xl text-xl">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 font-medium">Fast Turnaround</p>
+                                    <p class="text-sm font-bold text-white">&lt; 48 Hours Avg.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">About Me</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">Driven by passion, delivered with professional discipline.</h3>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+                        Being a young freelancer doesn't mean compromising on quality. In fact, it means I bring unmatched hunger, fresh perspectives, and cutting-edge tech skills to every single project. Whether you need a lightning-fast landing page or punchy content that captivates audiences, I combine sharp work ethic with absolute reliability.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4 border-t border-slate-800">
+                        <div>
+                            <p class="text-3xl font-extrabold text-blue-400">25+</p>
+                            <p class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Projects Completed</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-indigo-400">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">On-Time Delivery</p>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <p class="text-3xl font-extrabold text-purple-400">4.9/5</p>
+                            <p class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Client Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">My Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Digital Services Offered</h3>
+                <p class="text-slate-400 text-sm sm:text-base">Click any service card to view detailed deliverables, pricing tiers, and book directly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div onclick="openServiceModal('Web Design & Development', 'Modern, responsive, and blazing-fast websites built with clean code and high aesthetic standards.', ['Custom HTML5 / TailwindCSS', 'Fully Responsive on All Devices', 'Performance & SEO Optimized', 'Interactive UI Components'], '$150 starting')" class="bg-card border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 card-glow transition-all group cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Web Design</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Modern, responsive, and blazing-fast websites built with clean code.</p>
+                    </div>
+                    <div class="flex items-center text-xs font-semibold text-blue-400 group-hover:translate-x-1 transition-transform">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div onclick="openServiceModal('Content Writing & Copy', 'Engaging blog posts, sales copywriting, and newsletters designed to hook readers and drive action.', ['SEO Keyword Research', 'Compelling Sales Copy', 'Blog Posts & Newsletters', 'Audience Engagement Focus'], '$80 starting')" class="bg-card border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/50 card-glow transition-all group cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Content Writing</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Engaging blog posts, sales copywriting, and newsletters.</p>
+                    </div>
+                    <div class="flex items-center text-xs font-semibold text-indigo-400 group-hover:translate-x-1 transition-transform">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div onclick="openServiceModal('SEO Optimization', 'On-page SEO, keyword optimization, and performance audits to boost your organic search rankings.', ['On-Page SEO Audits', 'Meta Tag & Header Optimization', 'Site Speed Tuning', 'Google Search Console Setup'], '$100 starting')" class="bg-card border border-slate-800 rounded-2xl p-6 hover:border-purple-500/50 card-glow transition-all group cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">SEO Optimization</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">On-page SEO, keyword optimization, and performance audits.</p>
+                    </div>
+                    <div class="flex items-center text-xs font-semibold text-purple-400 group-hover:translate-x-1 transition-transform">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div onclick="openServiceModal('Social Media Growth', 'Strategic social content creation, scheduling, and community engagement to grow your digital footprint.', ['Content Calendar Creation', 'Graphics & Visual Assets', 'Hashtag Strategy', 'Engagement & Growth Tactics'], '$120/mo')" class="bg-card border border-slate-800 rounded-2xl p-6 hover:border-pink-500/50 card-glow transition-all group cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl mb-6 group-hover:bg-pink-600 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Social Media</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Strategic social content creation, scheduling, and growth.</p>
+                    </div>
+                    <div class="flex items-center text-xs font-semibold text-pink-400 group-hover:translate-x-1 transition-transform">
+                        <span>View Details</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flagship" class="py-24 bg-gradient-to-b from-slate-900 to-[#0f172a] border-y border-slate-800 relative overflow-hidden">
+            <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest rounded-full border border-blue-500/20">Portfolio Corner</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-4">Flagship Project Showcase</h2>
+                    <p class="text-slate-400 text-sm sm:text-base">The crowning achievement of my freelance journey—engineered from scratch with state-of-the-art frontend tech.</p>
+                </div>
+
+                <div class="bg-card border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+                    <!-- Project Image -->
+                    <div class="lg:col-span-7 bg-slate-900 relative min-h-[300px] sm:min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="OmniFlow Flagship Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
+                            <div>
+                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/30">Live Production App</span>
+                                <h4 class="text-2xl sm:text-3xl font-bold text-white mt-2">OmniFlow AI - Productivity Suite</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Details -->
+                    <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-blue-400 text-xs font-semibold mb-3">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Featured Masterpiece</span>
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">OmniFlow Platform</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                A comprehensive multi-tenant SaaS dashboard featuring real-time analytics, modular widget customization, dark mode state persistence, and high-performance Tailwind layouts. Built as my flagship project to demonstrate end-to-end design and coding excellence.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-blue-300 rounded-lg border border-slate-700">HTML5 / Tailwind</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-indigo-300 rounded-lg border border-slate-700">Vanilla ES6+</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-slate-800 text-purple-300 rounded-lg border border-slate-700">Chart Integration</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button onclick="openDemoModal('OmniFlow AI Suite', 'A fully featured SaaS dashboard built with responsive grid systems, real-time widget states, and advanced analytics visualization.')" class="flex-1 py-3 px-6 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-500/20 transition-all text-center flex items-center justify-center space-x-2">
+                                <span>Explore Flagship</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </button>
+                            <a href="#contact" class="px-6 py-3 text-sm font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all text-center">
+                                Request Code Review
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Portfolio</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Featured Work</h3>
+                </div>
+                <p class="text-slate-400 text-sm mt-4 md:mt-0 max-w-sm">A selection of recent projects built with dedication, creativity, and clean code.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-card border border-slate-800 rounded-2xl overflow-hidden card-glow transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-800 relative">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=600" alt="SaaS Landing Page" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-blue-400 border border-slate-700">Web Development</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Nova SaaS Platform</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">A high-conversion marketing landing page for a tech startup featuring clean animations and responsive layout.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">TailwindCSS</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">JavaScript</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openDemoModal('Nova SaaS Platform', 'A complete marketing web app built for a SaaS startup with modern interactive components, mobile hamburger navigation, and fast loading times.')" class="w-full py-2.5 px-4 text-sm font-semibold text-blue-400 bg-blue-500/10 hover:bg-blue-600 hover:text-white rounded-xl transition-all flex items-center justify-center space-x-2">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-card border border-slate-800 rounded-2xl overflow-hidden card-glow transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-800 relative">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600" alt="E-Commerce Store" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-indigo-400 border border-slate-700">E-Commerce</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Aura Aesthetic Shop</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Minimalist e-commerce frontend design optimized for mobile shopping experience and seamless checkout flow.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">HTML5/CSS3</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">Responsive</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">Branding</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openDemoModal('Aura Aesthetic Shop', 'A minimalist store frontend built with fluid grids, product filter modals, and responsive design principles for modern retail brands.')" class="w-full py-2.5 px-4 text-sm font-semibold text-indigo-400 bg-indigo-500/10 hover:bg-indigo-600 hover:text-white rounded-xl transition-all flex items-center justify-center space-x-2">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-card border border-slate-800 rounded-2xl overflow-hidden card-glow transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-800 relative">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600" alt="Content Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-pink-400 border border-slate-700">Copywriting & SEO</div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">TechPulse Blog Series</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">An SEO-optimized technology blog series that generated over 20K organic views in its first month.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">SEO Writing</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">Copywriting</span>
+                                <span class="px-2.5 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-lg">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openDemoModal('TechPulse Blog Series', 'An extensive content writing project focusing on tech trends, keyword optimization, and audience retention strategies.')" class="w-full py-2.5 px-4 text-sm font-semibold text-pink-400 bg-pink-500/10 hover:bg-pink-600 hover:text-white rounded-xl transition-all flex items-center justify-center space-x-2">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="whyme" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-900/40 rounded-3xl border border-slate-800/80 my-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Proof & Benefits</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Why Hire Me?</h3>
+                <p class="text-slate-400 text-sm sm:text-base">What clients and partners say about working with me on digital projects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Proof Card 1 -->
+                <div class="bg-card border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 space-x-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
+                            "Alex's communication is top-notch. He responds within minutes and understood our requirements right away without any back-and-forth lag."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">JD</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Jordan Davis</h5>
+                            <p class="text-xs text-slate-400">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proof Card 2 -->
+                <div class="bg-card border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 space-x-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
+                            "The code quality and responsiveness of our landing page exceeded expectations. Delivered 2 days ahead of schedule too!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold">SM</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Sarah Miller</h5>
+                            <p class="text-xs text-slate-400">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proof Card 3 -->
+                <div class="bg-card border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 space-x-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
+                            "Incredible student-friendly pricing without compromising an ounce of quality. Will definitely hire Alex for future updates!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">RK</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Ryan King</h5>
+                            <p class="text-xs text-slate-400">E-Commerce Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-slate-900/50 border-t border-slate-800/80 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Get In Touch</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Build Something Great</h3>
+                    <p class="text-slate-400 text-sm sm:text-base">Have a project in mind or want to discuss details? Drop a message below!</p>
+                </div>
+
+                <div class="bg-card border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="project-brief" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Brief / Message</label>
+                            <textarea id="project-brief" rows="5" required class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none" placeholder="Tell me about your project, goals, and timeline..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Toast Notification -->
+                    <div id="toast" class="hidden absolute inset-x-6 bottom-6 bg-emerald-900/95 border border-emerald-700/80 text-emerald-100 p-4 rounded-2xl shadow-xl flex items-center justify-between backdrop-blur">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                            <span class="text-sm font-medium">Message sent successfully! I'll get back to you within 24 hours.</span>
+                        </div>
+                        <button onclick="hideToast()" class="text-emerald-300 hover:text-white px-2">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Alex.dev</span>
+                <span class="text-slate-500 text-sm">© 2026 Alex. All rights reserved.</span>
+            </div>
+            <div class="flex items-center space-x-6 text-slate-400 text-lg">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Demo / Flagship Modal -->
+    <div id="demo-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-card border border-slate-700 w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeDemoModal()" aria-label="Close modal" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-4">
+                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Interactive Preview</span>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold text-white mb-3">Project Title</h3>
+            <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6">Project description goes here...</p>
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center justify-between mb-6">
+                <span class="text-xs text-slate-400">Status: <strong class="text-emerald-400">Deployed & Active</strong></span>
+                <span class="text-xs text-slate-400">Turnaround: <strong class="text-slate-200">&lt; 48 Hours</strong></span>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="closeDemoModal(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" class="flex-1 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all text-center">
+                    Request Similar Project
+                </button>
+                <button onclick="closeDemoModal()" class="px-6 py-3 text-sm font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-card border border-slate-700 w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeServiceModal()" aria-label="Close modal" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-4">
+                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-semibold rounded-full border border-indigo-500/20">Service Specification</span>
+            </div>
+            <h3 id="service-modal-title" class="text-2xl font-bold text-white mb-3">Service Name</h3>
+            <p id="service-modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6">Service description...</p>
+            
+            <div class="mb-6">
+                <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Key Deliverables:</h5>
+                <ul id="service-modal-list" class="space-y-2 text-sm text-slate-300">
+                    <!-- Dynamic list items -->
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center justify-between mb-6">
+                <span class="text-xs text-slate-400">Pricing Tier:</span>
+                <strong id="service-modal-price" class="text-emerald-400 text-sm font-bold">$150 starting</strong>
+            </div>
+
+            <div class="flex gap-4">
+                <button onclick="bookServiceFromModal()" class="flex-1 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all text-center">
+                    Book This Service Now
+                </button>
+                <button onclick="closeServiceModal()" class="px-6 py-3 text-sm font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Submission Feedback Toast
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            
+            setTimeout(() => {
+                hideToast();
+            }, 5000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('hidden');
+        }
+
+        // Project Demo Modal Handler
+        function openDemoModal(title, description) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = description;
+            document.getElementById('demo-modal').classList.remove('hidden');
+        }
+
+        function closeDemoModal() {
+            document.getElementById('demo-modal').classList.add('hidden');
+        }
+
+        // Service Modal Handler
+        let currentServiceName = '';
+        function openServiceModal(title, description, deliverables, price) {
+            currentServiceName = title;
+            document.getElementById('service-modal-title').innerText = title;
+            document.getElementById('service-modal-desc').innerText = description;
+            document.getElementById('service-modal-price').innerText = price;
+            
+            const listContainer = document.getElementById('service-modal-list');
+            listContainer.innerHTML = '';
+            deliverables.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center space-x-2';
+                li.innerHTML = `<i class="fa-solid fa-check text-blue-400 text-xs"></i><span>${item}</span>`;
+                listContainer.appendChild(li);
+            });
+
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+
+        function bookServiceFromModal() {
+            closeServiceModal();
+            document.getElementById('project-brief').value = `Hi Alex, I would like to book your ${currentServiceName} service. Let's discuss details!`;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close modals when clicking outside content area
+        window.addEventListener('click', (e) => {
+            const demoModal = document.getElementById('demo-modal');
+            const serviceModal = document.getElementById('service-modal');
+            if (e.target === demoModal) {
+                closeDemoModal();
+            }
+            if (e.target === serviceModal) {
+                closeServiceModal();
+            }
+        });
+    </script>
+</body>
+</html>
